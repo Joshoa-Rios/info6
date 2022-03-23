@@ -9,7 +9,9 @@
     <script src="{{ asset("js/app.js") }}"></script>
 </head>
 <body>
+    
     <div class="container">
+        @include('fragments.nav-bar')
         @yield('content')
     </div>
 </body>

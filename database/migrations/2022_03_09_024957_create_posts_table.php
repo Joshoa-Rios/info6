@@ -16,8 +16,22 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title',500)->nullable();
-            $table->string('url_clean',500)->nullable();
-            $table->text('content')->nullable();
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  $table->text('content')->nullable();
             $table->enum('posted',['yes','no'])->nulleable()->default('no');
             $table->integer('category_id')->unsigned()->nullable();
             $table->timestamps();
