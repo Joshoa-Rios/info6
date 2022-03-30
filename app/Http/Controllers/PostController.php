@@ -16,7 +16,11 @@ class PostController extends Controller
     public function index()
     {
         //
-        return view('dashboard.posts');
+        $posts = Posts::get();
+        //dd($post);
+        return view('dashboard.post.posts',[
+            'posts'=> $posts
+        ]);
     }
 
     /**
@@ -27,7 +31,7 @@ class PostController extends Controller
     public function create()
     {
         //
-        return view('dashboard.posts');
+        return view('dashboard.post.create');
     }
 
     /**
@@ -92,7 +96,7 @@ class PostController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified resource from storage.  
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
