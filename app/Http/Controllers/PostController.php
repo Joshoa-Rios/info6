@@ -77,10 +77,13 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Posts $post)
     {
         //
-        return "Edit:".$id;
+        dd($post);
+        return view('dashboard.post.edit', [
+            'post' => $post
+        ]);
     }
 
     /**
