@@ -10,3 +10,15 @@
     </form>
 
 @endsection
+
+
+@section('content')
+    @include('fragments.validation-errors')
+    @include('fragments.sesion')
+    <h1>Categories</h1>
+    <form action="{{route("categorie.store") }}" method="categorie">
+    @csrf
+        @include('dashboard.post._form')
+    </form>
+
+@endsection

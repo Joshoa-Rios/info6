@@ -18,8 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::resource('/post', PostController::class);
+Route::resource('/categories', CategoriesController::class);
 
 Auth::routes();
 
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
