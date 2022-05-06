@@ -19,8 +19,15 @@ Route::get('/', function () {
 });
 
 
-Route::resource('/post', PostController::class);
-Route::resource('/categories', CategoriesController::class);
+
+
+
+
+Route::middleware(['admin'])->group(function () {
+    Route::resource('/post', PostController::class);
+    Route::resource('/categories', CategoriesController::class);
+});
+
 
 Auth::routes();
 
